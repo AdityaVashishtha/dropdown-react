@@ -82,16 +82,22 @@ a {
   transform: translateX(-45%); 
   padding: 1rem;
   overflow: hidden; 
+  transition: height var(--speed) ease-in-out;
+}
+
+.menu {
+  width: 100%;
 }
 
 .menu-item {
-  display: flex;
+  display: flex;  
   height: calc(var(--nav-size) - 10);  
+  background-color: var(--bg);
   align-items: center;
   justify-items: auto;
   border-radius: var(--border-radius);
   padding: 0.5rem;
-  transition: background 300ms;
+  transition: background 300ms;  
 }
 
 .menu-item:hover {
@@ -100,5 +106,60 @@ a {
 
 .icon-right {
   margin-left: auto;
+}
+
+.menu-primary-enter {  
+  transform: translateX(-110%);
+}
+
+.menu-primary-enter-active {
+  position: absolute;
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.menu-primary-exit {
+  position: absolute;
+}
+
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+
+
+.menu-secondary-enter {
+  position: absolute;
+  transform: translateX(110%);
+}
+
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.menu-secondary-exit {
+  position: absolute;
+}
+
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+.menu-secondary-enter {
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit {
+
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
 }
 
