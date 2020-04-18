@@ -5,8 +5,7 @@ import logo from './logo.svg';
 function App() {
   return (
     <Navbar>
-      <NavItem icon="😎" />
-      <NavItem icon="😎" />
+      <NavItem icon="⚙" />
       <NavItem icon="🔻">
         <DropdownMenu></DropdownMenu>
       </NavItem>
@@ -65,8 +64,8 @@ function DropdownMenu() {
         classNames="menu-primary"
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem>My Profiles</DropdownItem>
-          <DropdownItem leftIcon="🛒" rightIcon="🗝" goToMenu="settings">Shop here</DropdownItem>
+          <DropdownItem leftIcon="👩" rightIcon="🗝">My Profiles</DropdownItem>
+          <DropdownItem leftIcon="🛒" goToMenu="settings">Categories</DropdownItem>
         </div>
       </CSSTransition>
 
@@ -77,11 +76,11 @@ function DropdownMenu() {
         classNames="menu-secondary"
         onEnter={calcHeight}     >
         <div className="menu">
-          <DropdownItem goToMenu="main">Back</DropdownItem>
-          <DropdownItem leftIcon="🛒" rightIcon="🗝">Shop here</DropdownItem>
-          <DropdownItem leftIcon="🛒" rightIcon="🗝">Shop here</DropdownItem>
-          <DropdownItem leftIcon="🛒" rightIcon="🗝">Shop here</DropdownItem>
-          <DropdownItem leftIcon="🛒" rightIcon="🗝">Shop here</DropdownItem>
+          <DropdownItem leftIcon="◀" goToMenu="main">Back</DropdownItem>
+          <DropdownItem leftIcon="🎞">Movies</DropdownItem>
+          <DropdownItem leftIcon="🎨">Art</DropdownItem>
+          <DropdownItem leftIcon="🏈">Sports</DropdownItem>
+          <DropdownItem leftIcon="🛠">Hardware</DropdownItem>
         </div>
       </CSSTransition>
     </div >
